@@ -335,12 +335,6 @@ button.carousel-frame {
 
 .info-entry-link:hover { text-decoration: underline; }
 
-.info-entry-meta {
-  font-size: 12.5px;
-  line-height: 1.4;
-  color: var(--muted);
-}
-
 .info-entry-year {
   font-family: var(--sans);
   font-weight: 500;
