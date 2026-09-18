@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work — Danielle Chang</title>
 <meta name="description" content="Selected projects and CV from Danielle Chang, creative producer and director.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,34 +20,34 @@
 
 <main class="page">
 
-  <section class="intro intro-sm">
-    <p class="eyebrow">Selected Projects</p>
-    <h1>Work.</h1>
-  </section>
+  <h1 class="sr-only">Work</h1>
 
-  <section class="block">
-    <ul class="worklist">
-      <li class="work-item">
-        <button class="work-row" aria-expanded="false">
+  <section class="work-grid-section">
+    <div class="work-grid">
+      <figure class="work-tile">
+        <button class="carousel-frame" data-images="assets/img/jaag-1.webp|assets/img/jaag-2.webp" aria-label="Show next photo of JAAG">
+          <img src="assets/img/jaag-1.webp" alt="JAAG — creative direction, production, and styling">
+          <span class="carousel-shade" aria-hidden="true"></span>
+          <span class="carousel-dots" aria-hidden="true">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </span>
+        </button>
+        <figcaption>
           <span class="row-title">JAAG</span>
           <span class="row-meta">Creative Direction · Production · Styling</span>
-          <span class="row-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="work-detail">
-          <p>Going beyond traditional headshots, we aimed to encapsulate the breadth of jaag — who she is, the energy she brings, and the environment she curates.</p>
+        </figcaption>
+      </figure>
+      <figure class="work-tile">
+        <div class="carousel-frame">
+          <img src="assets/img/sf-aapi.webp" alt="SF AAPI Block Party — event producer, media director, talent booker">
         </div>
-      </li>
-      <li class="work-item">
-        <button class="work-row" aria-expanded="false">
+        <figcaption>
           <span class="row-title">SF AAPI Block Party</span>
           <span class="row-meta">Event Producer · Media Director · Talent Booker</span>
-          <span class="row-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="work-detail">
-          <p>To celebrate AAPI month we put together a show featuring headliner Jai Wolf with 10+ special guests for over 5,000 people.</p>
-        </div>
-      </li>
-    </ul>
+        </figcaption>
+      </figure>
+    </div>
   </section>
 
   <section class="block">
