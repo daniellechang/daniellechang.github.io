@@ -3,7 +3,7 @@
   --ink: #111110;
   --muted: #78766e;
   --line: #e6e3da;
-  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --mono: 'helvetica', ui-monospace, monospace;
 }
 
 * { box-sizing: border-box; }
