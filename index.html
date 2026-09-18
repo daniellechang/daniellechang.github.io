@@ -7,155 +7,24 @@
 <meta name="description" content="Danielle Chang is a creative producer and director based in San Francisco, working across brand, entertainment, and consumer tech.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="landing-body">
 
-<button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
+<header class="topbar landing-topbar">
+  <p class="bio-blurb">Danielle Chang is a creative producer and director focused on brand and performance creative — from startups to global brands. 8+ years across tech, entertainment, and consumer hardware. Based in San Francisco.</p>
+  <nav class="toplinks">
+    <a href="information.html">Information</a>
+    <a href="work.html">Work</a>
+  </nav>
+</header>
 
-<nav class="sidenav" id="sidenav">
-  <a href="#hero" class="brand">DC</a>
-  <ol>
-    <li><a href="#about" data-num="01"><span class="n">01</span>About</a></li>
-    <li><a href="#experience" data-num="02"><span class="n">02</span>Experience</a></li>
-    <li><a href="#projects" data-num="03"><span class="n">03</span>Projects</a></li>
-    <li><a href="#skills" data-num="04"><span class="n">04</span>Skills</a></li>
-    <li><a href="#contact" data-num="05"><span class="n">05</span>Contact</a></li>
-  </ol>
-  <a class="sidenav-linkedin" href="https://www.linkedin.com/in/danielle--chang/" target="_blank" rel="noopener">LinkedIn ↗</a>
-</nav>
-
-<main>
-
-  <section id="hero" class="hero">
-    <div class="hero-text">
-      <h1>Hi, I'm<br>Danielle.</h1>
-      <p class="role">CREATIVE PRODUCER &amp; DIRECTOR</p>
-      <p class="location">San Francisco, United States</p>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/img/profile.webp" alt="Portrait of Danielle Chang">
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <span class="section-num">01</span>
-    <h2>About</h2>
-    <div class="section-body">
-      <p class="lede">Brand + Performance Creative — Startups to Global Brands.</p>
-      <p>I make ambitious creative happen and hold it to a number. Creative director and producer for 8+ years across tech, entertainment, and consumer hardware within in-house and agency teams. I've built and led cross-functional teams, $130K+ budgets, and occasionally gloriously chaotic launches that turn big ideas into shipped work.</p>
-      <p>What I love is creative that's as accountable as it is good — helping teams get there through testing, systems, and dashboards that let great work actually ship.</p>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <span class="section-num">02</span>
-    <h2>Experience</h2>
-    <ul class="timeline">
-      <li>
-        <div class="timeline-head">
-          <h3>Vibrvncy <span class="role-title">— Executive Producer</span></h3>
-          <span class="years">2015 — Present</span>
-        </div>
-        <p class="timeline-detail">Clients: Red Bull, Nike, G-Shock, 88Rising, Tag Heuer, Pandora, Universal Music</p>
-      </li>
-      <li>
-        <div class="timeline-head">
-          <h3>HOVERAir <span class="role-title">— Global Brand / Project Manager</span></h3>
-          <span class="years">2025 — 2026</span>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-head">
-          <h3>DC Creative <span class="role-title">— Creative Producer</span></h3>
-          <span class="years">2023 — Present</span>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-head">
-          <h3>GoPro <span class="role-title">— Creative Strategist / Project Manager</span></h3>
-          <span class="years">2020 — 2022</span>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-head">
-          <h3>HOOKED <span class="role-title">— Content Strategist</span></h3>
-          <span class="years">2018 — 2019</span>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-head">
-          <h3>iQIYI.com <span class="role-title">— Assistant Visual Director, Hot Blood Dance Crew</span></h3>
-          <span class="years">2018</span>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <section id="projects" class="section">
-    <span class="section-num">03</span>
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <article class="project-card">
-        <img src="assets/img/jaag-1.webp" alt="jaag DJ set, creative direction by Danielle Chang">
-        <div class="project-info">
-          <h3>JAAG</h3>
-          <p class="project-role">Creative Direction · Production · Styling</p>
-          <p>Going beyond traditional headshots, we aimed to encapsulate the breadth of jaag — who she is, the energy she brings, and the environment she curates.</p>
-        </div>
-      </article>
-      <article class="project-card">
-        <img src="assets/img/sf-aapi.webp" alt="SF AAPI Block Party crowd shot">
-        <div class="project-info">
-          <h3>SF AAPI Block Party</h3>
-          <p class="project-role">Event Producer · Media Director · Talent Booker</p>
-          <p>To celebrate AAPI month we put together a show featuring headliner Jai Wolf with 10+ special guests for over 5,000 people.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <span class="section-num">04</span>
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Strategic Creative Development</li>
-      <li>Complex Project Management</li>
-      <li>Creative Agencies</li>
-      <li>Media Production</li>
-      <li>Creative Consulting</li>
-      <li>Marketing</li>
-      <li>Branding &amp; Identity</li>
-      <li>Marketing Strategy</li>
-      <li>Analytical Skills</li>
-      <li>Creative Strategy</li>
-      <li>Creative Problem Solving</li>
-      <li>Microsoft Office</li>
-      <li>Customer Service</li>
-      <li>Social Media</li>
-      <li>Video</li>
-      <li>Editing</li>
-      <li>Adobe Photoshop</li>
-      <li>Videography</li>
-      <li>Photography</li>
-      <li>Film</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="section section-contact">
-    <span class="section-num">05</span>
-    <h2>Contact</h2>
-    <p class="contact-lede">Let's work together.</p>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/danielle--chang/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <span class="contact-location">San Francisco, United States</span>
-    </div>
-    <p class="footer-note">&copy; <span id="year"></span> Danielle Chang</p>
-  </section>
-
+<main class="landing">
+  <div class="landing-avatar">
+    <img src="assets/img/profile.webp" alt="Portrait of Danielle Chang">
+  </div>
+  <h1 class="landing-wordmark">Danielle<br>Chang</h1>
 </main>
 
 <script src="script.js"></script>
