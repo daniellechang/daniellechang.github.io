@@ -6,8 +6,15 @@ document.querySelectorAll('.carousel-frame[data-images]').forEach((frame) => {
   if (images.length < 2) return;
 
   const img = frame.querySelector('img');
-  const dots = frame.querySelectorAll('.dot');
+  const dotsContainer = frame.querySelector('.carousel-dots');
   let index = 0;
+
+  images.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll('.dot');
 
   frame.addEventListener('click', () => {
     index = (index + 1) % images.length;
