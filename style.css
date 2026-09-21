@@ -62,7 +62,7 @@ button {
 
 .topbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
@@ -106,10 +106,6 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-.landing-topbar {
-  align-items: baseline;
 }
 
 .bio-blurb {
