@@ -147,6 +147,7 @@ button {
   flex-shrink: 0;
   width: 72px;
   height: 72px;
+  margin-bottom: 16px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -417,13 +418,31 @@ button.carousel-frame {
   .cv-row { grid-template-columns: 1fr; gap: 4px; }
   .cv-year { text-align: left; }
 
-  .landing-body { min-height: 0; }
-  .landing {
-    padding: 40px 20px 56px;
+  .landing-body {
+    min-height: 100svh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
   }
-  .landing-bottom {
+  .landing-topbar {
+    padding-top: 0;
+  }
+  .bio-blurb { display: none; }
+  .landing-topbar .toplinks {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
+  }
+  .landing {
+    justify-content: flex-start;
+    padding: 40px 20px 0;
+  }
+  .landing-bottom {
+    align-items: center;
+    gap: 12px;
+  }
+  .landing-avatar { width: 44px; height: 44px; margin-bottom: 0; }
+  .landing-wordmark {
+    font-size: clamp(28px, 11vw, 44px);
+    white-space: nowrap;
   }
 }
