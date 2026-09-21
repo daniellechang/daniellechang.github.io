@@ -430,7 +430,8 @@ button.carousel-frame {
   .landing-topbar .toplinks {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 14px;
+    font-size: 18px;
   }
   .landing {
     justify-content: flex-start;
