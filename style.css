@@ -308,7 +308,7 @@ button.carousel-frame {
 .info-col:nth-child(3) { grid-column: 5; }
 
 .info-col-title {
-  font-size: 7px;
+  font-size: 9px;
   font-family: var(--sans);
   font-weight: 600;
   text-transform: uppercase;
