@@ -287,10 +287,6 @@ button.carousel-frame {
   gap: 2px;
 }
 
-.work-tile .row-title {
-  font-size: 15px;
-}
-
 .work-tile .row-meta {
   font-size: 12.5px;
 }
@@ -348,7 +344,7 @@ button.carousel-frame {
 .row-title {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .row-meta {
