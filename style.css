@@ -497,7 +497,7 @@ button.carousel-frame {
   .topbar { padding: 20px 20px; }
   .page { padding: 0 20px; }
   .intro { padding: 64px 0 48px; }
-  .work-grid-section { padding-top: 43px; }
+  .work-grid-section { padding-top: 43px; padding-bottom: 20px; }
   .work-grid-section + .block { border-top: none; padding-top: 16px; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .cv-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; padding: 9px 0; }
