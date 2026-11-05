@@ -602,4 +602,11 @@ button.carousel-frame {
     font-size: clamp(28px, 11vw, 44px);
     white-space: nowrap;
   }
+  /* Where supported, trim the big name's box to its capital letters, so its top edge
+     is exactly the top of the "D" on every browser. Then place it at the same height
+     as the top of "Danielle C." on the subpages (about 34px from the top). */
+  @supports (text-box: trim-both cap alphabetic) {
+    .landing { padding-top: 34px; }
+    .landing-wordmark { text-box: trim-both cap alphabetic; }
+  }
 }
