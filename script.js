@@ -83,3 +83,11 @@ document.querySelectorAll('.carousel-frame').forEach((frame) => {
     if (count > 1) goTo(index + 1);
   });
 });
+
+// Once the page has loaded, fetch the remaining carousel photos so swiping never waits on them
+window.addEventListener('load', () => {
+  document.querySelectorAll('.carousel-track img[loading="lazy"]').forEach((img) => {
+    // Skip photos that are hidden at this screen size (offsetParent is null inside display: none)
+    if (img.offsetParent !== null) img.loading = 'eager';
+  });
+});
