@@ -93,6 +93,8 @@ button {
 
 .topbar:not(.landing-topbar) {
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .topbar:not(.landing-topbar) .toplinks {
@@ -223,11 +225,11 @@ button {
 /* ---------- Work photo grid ---------- */
 
 .work-grid-section {
-  padding: 56px 0;
+  padding: 27px 0 40px;
 }
 
 .work-grid-section + .block {
-  border-top: 1px solid var(--line);
+  padding-top: 0;
 }
 
 .work-grid {
@@ -372,13 +374,16 @@ button.carousel-frame {
 
 .work-tile figcaption {
   margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  line-height: 1.4;
 }
 
+.work-tile figcaption .row-meta {
+  margin-left: 8px;
+}
+
+.work-tile .row-title,
 .work-tile .row-meta {
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 /* ---------- Information grid ---------- */
@@ -386,7 +391,7 @@ button.carousel-frame {
 .info-grid {
   display: grid;
   grid-template-columns: 1.2fr 104px 1fr 24px 1fr;
-  padding: 56px 0;
+  padding: 24px 0 56px;
 }
 
 .info-col:nth-child(1) { grid-column: 1; }
@@ -466,7 +471,7 @@ button.carousel-frame {
   font-size: 13px;
   color: var(--muted);
   white-space: nowrap;
-  text-align: right;
+  text-align: left;
 }
 
 /* ---------- Footer ---------- */
