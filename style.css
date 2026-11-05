@@ -96,7 +96,7 @@ button {
 }
 
 .topbar:not(.landing-topbar) .toplinks {
-  font-size: 12px;
+  font-size: 11px;
   gap: 14px;
 }
 
@@ -311,13 +311,13 @@ button {
 
 .carousel-title-text .slide-title {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
 
 .carousel-title-text .slide-meta {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.35;
   opacity: 0.9;
 }
@@ -499,10 +499,10 @@ button.carousel-frame {
   .intro { padding: 64px 0 48px; }
   .work-grid-section { padding-top: 43px; }
   .work-grid-section + .block { border-top: none; padding-top: 16px; }
-  .work-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .work-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .cv-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; padding: 9px 0; }
-  .cv-row .row-title { font-size: 16px; }
-  .cv-row .row-meta { text-align: right; font-size: 12px; }
+  .cv-row .row-title { font-size: 14px; }
+  .cv-row .row-meta { text-align: right; font-size: 11px; }
   .cv-year { display: none; }
   .work-tile figcaption { display: none; }
 
