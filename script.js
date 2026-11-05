@@ -3,50 +3,13 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const mobileQuery = window.matchMedia('(max-width: 640px)');
 
-document.querySelectorAll('.carousel-frame[data-images]').forEach((frame) => {
-  const images = frame.dataset.images.split('|');
-  const firstImg = frame.querySelector('img');
+document.querySelectorAll('.carousel-frame').forEach((frame) => {
+  // Slides are written in the HTML: an optional title slide (mobile only, via CSS) plus the photos
+  const track = frame.querySelector('.carousel-track');
   const dotsContainer = frame.querySelector('.carousel-dots');
-  const tile = frame.closest('.work-tile');
+  if (!track || !dotsContainer) return;
+  track.querySelectorAll('img').forEach((img) => { img.draggable = false; });
   let index = 0;
-
-  // Build a sliding track holding every photo
-  const track = document.createElement('div');
-  track.className = 'carousel-track';
-
-  // Title slide: blurred copy of the first photo with the caption on top (shown on mobile via CSS)
-  const caption = tile && tile.querySelector('figcaption');
-  if (caption) {
-    const slide = document.createElement('div');
-    slide.className = 'carousel-title-slide';
-    const bg = document.createElement('img');
-    bg.src = images[0];
-    bg.alt = '';
-    bg.draggable = false;
-    const text = document.createElement('span');
-    text.className = 'carousel-title-text';
-    const title = caption.querySelector('.row-title');
-    const meta = caption.querySelector('.row-meta');
-    if (title) text.innerHTML += `<span class="slide-title">${title.innerHTML}</span>`;
-    if (meta) text.innerHTML += `<span class="slide-meta">${meta.textContent}</span>`;
-    slide.append(bg, text);
-    track.appendChild(slide);
-  }
-
-  images.forEach((src, i) => {
-    let img;
-    if (i === 0) {
-      img = firstImg;
-    } else {
-      img = document.createElement('img');
-      img.src = src;
-      img.alt = firstImg.alt;
-      img.loading = 'lazy';
-    }
-    img.draggable = false;
-    track.appendChild(img);
-  });
-  frame.insertBefore(track, frame.firstChild);
 
   const slides = () => [...track.children].filter((el) => getComputedStyle(el).display !== 'none');
   let count = 0;

@@ -511,7 +511,7 @@ button.carousel-frame {
 /* ---------- Responsive ---------- */
 
 @media (max-width: 700px) {
-  .info-grid { grid-template-columns: 1fr; gap: 0; padding: 40px 0; }
+  .info-grid { grid-template-columns: 1fr; gap: 0; padding: 20px 0 40px; }
   .info-col:nth-child(1),
   .info-col:nth-child(2),
   .info-col:nth-child(3) { grid-column: 1; }
@@ -522,10 +522,10 @@ button.carousel-frame {
 
 @media (max-width: 640px) {
   .topbar { padding: 20px 20px; }
-  .topbar:not(.landing-topbar) { padding-top: 12px; padding-bottom: 12px; }
+  .topbar:not(.landing-topbar) { padding-top: 8px; padding-bottom: 8px; }
   .page { padding: 0 20px; }
   .intro { padding: 64px 0 48px; }
-  .work-grid-section { padding-top: 43px; padding-bottom: 20px; }
+  .work-grid-section { padding-top: 25px; padding-bottom: 20px; }
   .work-grid-section + .block { border-top: none; padding-top: 16px; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .cv-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; padding: 9px 0; }
