@@ -27,7 +27,7 @@ document.querySelectorAll('.carousel-frame[data-images]').forEach((frame) => {
     text.className = 'carousel-title-text';
     const title = caption.querySelector('.row-title');
     const meta = caption.querySelector('.row-meta');
-    if (title) text.innerHTML += `<span class="slide-title">${title.textContent}</span>`;
+    if (title) text.innerHTML += `<span class="slide-title">${title.innerHTML}</span>`;
     if (meta) text.innerHTML += `<span class="slide-meta">${meta.textContent}</span>`;
     slide.append(bg, text);
     track.appendChild(slide);

@@ -235,7 +235,7 @@ button {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px 24px;
+  gap: 8px 12px;
 }
 
 .work-tile {
@@ -377,6 +377,28 @@ button.carousel-frame {
   line-height: 1.4;
 }
 
+/* Desktop: caption drops in only while hovering the tile */
+@media (hover: hover) and (min-width: 641px) {
+  .work-tile figcaption {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .work-tile:hover figcaption,
+  .work-tile:focus-within figcaption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tiles temporarily hidden on desktop */
+@media (min-width: 641px) {
+  .work-tile.hide-desktop { display: none; }
+}
+
+/* Line breaks meant only for the mobile title slide */
+.work-tile figcaption .slide-break { display: none; }
+
 .work-tile figcaption .row-meta {
   margin-left: 8px;
 }
@@ -458,7 +480,7 @@ button.carousel-frame {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: baseline;
-  gap: 8px 24px;
+  gap: 8px 12px;
   padding: 6px 0;
   border-top: 1px solid var(--line);
 }
@@ -500,6 +522,7 @@ button.carousel-frame {
 
 @media (max-width: 640px) {
   .topbar { padding: 20px 20px; }
+  .topbar:not(.landing-topbar) { padding-top: 12px; padding-bottom: 12px; }
   .page { padding: 0 20px; }
   .intro { padding: 64px 0 48px; }
   .work-grid-section { padding-top: 43px; padding-bottom: 20px; }
