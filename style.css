@@ -1,5 +1,5 @@
 :root {
-  --bg: #f5f6f8;
+  --bg: #ffffff;
   --ink: #14161a;
   --muted: #676c76;
   --line: #dfe2e7;
@@ -78,7 +78,7 @@ button {
 
 .toplinks {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   font-family: var(--sans);
   font-weight: 600;
   font-size: 11px;
@@ -87,7 +87,7 @@ button {
 }
 
 .toplinks a {
-  color: var(--muted);
+  color: var(--ink);
   padding-bottom: 3px;
 }
 
@@ -99,7 +99,11 @@ button {
 
 .topbar:not(.landing-topbar) .toplinks {
   font-size: 11px;
-  gap: 14px;
+}
+
+/* Desktop landing: start the nav at the same height as on the subpages */
+@media (min-width: 641px) {
+  .landing-topbar { padding-top: 23.75px; }
 }
 
 .topbar:not(.landing-topbar) .toplinks a {
@@ -108,7 +112,7 @@ button {
 }
 
 .toplinks a:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 .toplinks a.active {
@@ -128,7 +132,7 @@ button {
   margin: 0;
   font-size: 14px;
   line-height: 1.6;
-  color: var(--muted);
+  color: var(--ink);
 }
 
 .landing {
@@ -162,6 +166,10 @@ button {
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid var(--line);
+}
+
+@media (min-width: 641px) {
+  .landing-avatar { display: none; }
 }
 
 .landing-avatar img {
@@ -380,10 +388,21 @@ button.carousel-frame {
 /* Desktop: caption drops in only while hovering the tile */
 @media (hover: hover) and (min-width: 641px) {
   .work-tile figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    text-align: center;
+    width: 100%;
+    margin: 8px 0 0;
+    padding: 6px 10px;
+    background: #f2f3f5;
+    border-radius: 4px;
     opacity: 0;
     transform: translateY(-6px);
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
+  .work-tile figcaption .row-meta { margin-left: 0; }
   .work-tile:hover figcaption,
   .work-tile:focus-within figcaption {
     opacity: 1;
