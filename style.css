@@ -89,6 +89,19 @@ button {
 .toplinks a {
   color: var(--muted);
   padding-bottom: 3px;
+}
+
+.topbar:not(.landing-topbar) {
+  align-items: center;
+}
+
+.topbar:not(.landing-topbar) .toplinks {
+  font-size: 12px;
+  gap: 14px;
+}
+
+.topbar:not(.landing-topbar) .toplinks a {
+  padding-bottom: 0;
   transition: color 0.15s ease;
 }
 
@@ -241,6 +254,83 @@ button {
   padding: 0;
   border: 0;
   background: none;
+  overflow: hidden;
+  border-radius: 2px;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.carousel-track.dragging { transition: none; }
+
+/* Title slide (first slide: blurred cover + project name/roles) — mobile only */
+.carousel-title-slide {
+  display: none;
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.carousel-title-slide img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  filter: blur(2px) saturate(1.1) brightness(0.9);
+  transform: scale(1.15);
+}
+
+.carousel-title-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    rgba(0, 0, 0, 0.28);
+}
+
+.carousel-title-text {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-title-text .slide-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.carousel-title-text .slide-meta {
+  font-size: 12px;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .carousel-title-slide { display: block; }
+}
+
+.carousel-track img {
+  flex: 0 0 100%;
+  min-width: 0;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 button.carousel-frame {
@@ -398,17 +488,23 @@ button.carousel-frame {
   .info-col:nth-child(1),
   .info-col:nth-child(2),
   .info-col:nth-child(3) { grid-column: 1; }
-  .info-col { padding-top: 24px; border-top: 1px solid var(--line); }
-  .info-col:first-child { padding-top: 0; border-top: none; }
+  .info-col { padding-top: 52px; }
+  .info-col:first-child { padding-top: 0; }
+  .info-col-title { font-size: 12px; margin-bottom: 14px; }
 }
 
 @media (max-width: 640px) {
   .topbar { padding: 20px 20px; }
   .page { padding: 0 20px; }
   .intro { padding: 64px 0 48px; }
+  .work-grid-section { padding-top: 43px; }
+  .work-grid-section + .block { border-top: none; padding-top: 16px; }
   .work-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-  .cv-row { grid-template-columns: 1fr; gap: 4px; }
-  .cv-year { text-align: left; }
+  .cv-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; padding: 9px 0; }
+  .cv-row .row-title { font-size: 16px; }
+  .cv-row .row-meta { text-align: right; font-size: 12px; }
+  .cv-year { display: none; }
+  .work-tile figcaption { display: none; }
 
   .landing-body {
     min-height: 100svh;
@@ -422,7 +518,7 @@ button.carousel-frame {
   .landing-topbar .toplinks {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 2px;
     font-size: 18px;
   }
   .landing {
