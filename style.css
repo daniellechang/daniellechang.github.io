@@ -479,6 +479,14 @@ button.carousel-frame {
 
 .info-col p:last-child { margin-bottom: 0; }
 
+.info-col p a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.info-col p a:hover { color: var(--accent); }
+
 .info-entry {
   display: flex;
   flex-direction: column;
